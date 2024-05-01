@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useLogoutLG } from '../hooks/useLogoutLG'
 import { useAuthContext } from '../hooks/useAuthContext'
+import ViewUserInfo from '../user components/ViewUserInfo'
 
 const AdminNavbar = () => {
   const { logoutLG } = useLogoutLG()
@@ -20,8 +21,12 @@ const AdminNavbar = () => {
         <nav>
           {userLG && (
             <div>
-              <Link to={`/viewuser/${userLG._id}`}>Profile</Link>
-              <span>{userLG.isActive ? 'Inactive' : 'Active'}</span>
+              {/* <span>{userlg.name}</span> */}
+              
+              {/* <span>{userLG.isActive ? 'Inactive' : 'Active'}</span> */}
+              <span style={{color: userLG.isActive ? 'red' : 'green'}}> &#9679; </span>
+
+              
               <button onClick={handleClick}><i className="fa-solid fa-right-from-bracket"></i>Signout</button>
             </div>
           )}

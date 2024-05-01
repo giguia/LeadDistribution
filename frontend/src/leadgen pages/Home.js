@@ -88,8 +88,9 @@ const Home = () => {
   })
 
   return (
-    <div className="home">
-      <div><Navbar/></div>
+    <div className="wrapper">
+      {/* <div><Navbar/></div> */}
+      
       <div><LeadSidebar/></div>
       <div className="home-title">List of Leads</div>
       <div className="filter">
@@ -126,14 +127,16 @@ const Home = () => {
           type="text"
           placeholder="Search by name.."
           value={searchQuery}
-          onChange={handleSearchChange}
-        /></th>
+          onChange={handleSearchChange}/>
+        </th>
 
         {/* Show current page and total pages */}
         <th><p>Page {currentPage} of {pageNumbers.length}</p></th>
         </tr>
         </thead>
         </table>
+
+        
         </div>
           
         <div className="leads">

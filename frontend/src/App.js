@@ -20,6 +20,8 @@ import AdminLeads from './admin pages/AdminLeads'
 import AdminUsers from './admin pages/AdminUsers'
 import AdminProfile from './admin pages/AdminProfile'
 import LeadsList from './leadgen pages/LeadsList'
+import AdminDash from './admin pages/AdminDash'
+import AllUserInfo from './user components/AllUserInfo'
 function App() {
   const { userLG } = useAuthContext()
 
@@ -49,6 +51,8 @@ function App() {
             <Route path="/AdminUsers" element={<AdminUsers />} />
             <Route path="/AdminProfile" element={<AdminProfile />} />
             <Route path="/LeadsList" element={<LeadsList />} />
+            <Route path="/AdminDash" element={<AdminDash />} />
+            <Route path="/AllUserInfo" element={<AllUserInfo />} />
 
 
             {/* Login Route */}

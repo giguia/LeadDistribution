@@ -3,9 +3,13 @@ import AdminSidebar from '../admin components/AdminSidebar';
 const AdminLeads = () => {
     return (
         <div className="EditForm">
-            <AdminSidebar />
-            <p>Leads Page</p>
+            <div><AdminSidebar /></div>
+            <div>
+               <p>Leads Page</p> 
+            </div>
+            
         </div>
+        
     );
 }
 

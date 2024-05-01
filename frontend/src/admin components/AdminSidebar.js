@@ -14,40 +14,30 @@ const AdminSidebar = () => {
   return (
     <header>
     <div id="mySidenav" class="sidenav">
-		<p class="logo"><span>M</span>-SoftTech</p>
+		{/* <p class="logo"><img src={process.env.PUBLIC_URL + '/chromagen.png'} alt="Chromagen Logo" className="chromagens" /></p> */}
     <Link to="/" className="icon-a"> <i className="fa fa-dashboard icons"></i> Dashboard</Link>
 
     <Link to="/AdminLeads" className="icon-a"> <i className="fa fa-ticket icons"></i> Leads</Link>
-    <Link to="/userhome" className="icon-a"> <i className="fa fa-users icons"></i> Users</Link>
-	  <a href="#"class="icon-a"><i class="fa fa-shopping-bag icons"></i>   Orders</a>
-	  <a href="#"class="icon-a"><i class="fa fa-tasks icons"></i>   Inventory</a>
-	  <a href="#"class="icon-a"><i class="fa fa-user icons"></i>   Accounts</a>
+    <Link to="/AdminUsers" className="icon-a"> <i className="fa fa-users icons"></i> Users</Link>
+    <Link to="AdminProfile" className="icon-a"> <i className="fa fa-users icons"></i> Profileee</Link>
 
-
+	  <a href="/AdminDash"class="icon-a"><i class="fa fa-shopping-bag icons"></i>   Orders</a>
+	  <a href="/AdminProfile"class="icon-a"><i class="fa fa-tasks icons"></i>   Profileee</a>
     <Link to={`/viewuser/${userLG._id}`} className="icon-a">
       <i className="fa fa-user icons"></i> Profile
     </Link> 
+    <a href="#" className="icon-a" onClick={handleClick}><i className="fa fa-sign-out"></i> Sign Out</a>
 
+   <div className="bottom">
+   <span style={{color: userLG.isActive ? 'red' : 'green'}}> &#9679; </span>
 
-	  <a href="#"class="icon-a"><i class="fa fa-list-alt icons"></i>   Signout</a>
-      <button onClick={handleClick}><i className="fa-solid fa-right-from-bracket"></i>Log Out</button>
+    <p style={{display: 'inline-block', verticalAlign: 'middle'}}>Gianelle Esguerra</p>
+    {/* <p>{userlg.name}</p> */}
+  </div>   
 
 	</div>
+  
     
-      {/* <div className="container">
-        <Link to="/">
-        <img src={process.env.PUBLIC_URL + '/chromagen.png'} alt="Chromagen Logo" className="chromagen" />
-        </Link>
-        <nav>
-          {userLG && (
-            <div>
-              <Link to={`/viewuser/${userLG._id}`}>Profile</Link>
-              <span>{userLG.isActive ? 'Inactive' : 'Active'}</span>
-              <button onClick={handleClick}><i className="fa-solid fa-right-from-bracket"></i>Log Out</button>
-            </div>
-          )}
-        </nav>
-      </div> */}
     </header>
   )
 }

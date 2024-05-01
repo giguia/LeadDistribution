@@ -6,9 +6,10 @@ const AdminProfile = () => {
 
     return (
         <div className="EditForm">
-            <AdminSidebar />
-            <ViewUserInfo/>  
-            <p>Leads Page</p>
+            <div><AdminSidebar /></div>
+            <div><ViewUserInfo/>  </div>
+            
+            <p>Profile Page</p>
         </div>
     );
 }

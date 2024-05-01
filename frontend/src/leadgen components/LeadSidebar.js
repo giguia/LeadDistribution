@@ -17,14 +17,16 @@ const LeadSidebar = () => {
 		<p class="logo"><span>M</span>-SoftTech</p>
     <Link to="/add" className="icon-a"> <i className="fa fa-plus-square"></i> Add New Lead</Link>
 
-    <Link to="/LeadsList" className="icon-a"> <i className="fa fa-ticket icons"></i> Leads List</Link>
+    <Link to="/LeadList" className="icon-a"> <i className="fa fa-ticket icons"></i> Leads List</Link>
     <Link to="#" className="icon-a"> <i className="fa fa-users icons"></i> Users</Link>
 	  <a href="#"class="icon-a"><i class="fa fa-shopping-bag icons"></i>   Orders</a>
-	  <a href="#"class="icon-a"><i class="fa fa-tasks icons"></i>   Inventory</a>
+	  <a href="#"class="icon-a"><i class="fa fa-tasks icons"></i>   Statistics</a>
 	  <a href="#"class="icon-a"><i class="fa fa-user icons"></i>   Accounts</a>
       <Link to={`/viewuser/${userLG._id}`} className="icon-a">
       <i className="fa fa-user icons"></i> Profile
     </Link> 
+    <a href="#" className="icon-a" onClick={handleClick}><i className="fa fa-sign-out"></i> Sign Out</a>
+
 
 
     {/* <Link to={`/viewuser/${userLG._id}`} className="icon-a">

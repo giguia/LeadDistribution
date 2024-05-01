@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 import { useParams } from 'react-router-dom'
 import { useUsersContext } from "../hooks/useUsersContext"
 import AdminSidebar from '../admin components/AdminSidebar'
+import AdminNavbar from '../admin components/AdminNavbar'
 
 // Function to shorten ObjectId
 const objectIdToShortId = (objectId) => {
@@ -35,7 +36,9 @@ const ViewUserInfo = () => {
   }
   
     return (
-        <div className="ViewForm">
+        <div className="wrapper">
+        <AdminNavbar/>
+
         <form className="view">
         <AdminSidebar/>
         <Link to={"/"} className="back"><i className="fa-solid fa-arrow-left"></i></Link>

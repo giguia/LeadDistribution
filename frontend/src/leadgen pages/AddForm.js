@@ -3,9 +3,11 @@ import LeadForm from '../leadgen components/LeadForm'
 import LeadSidebar from '../leadgen components/LeadSidebar';
 const AddForm = () => {
     return (
-        <div className="AddForm">
+        <div className="maincontent">
+            <div className="AddForm">
             <LeadSidebar/>
             <LeadForm />
+            </div>
         </div>
     );
 }
